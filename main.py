@@ -54,7 +54,7 @@ pd.read_sql("""SELECT * FROM sqlite_master""", conn)
 # CodeGrade step1
 # Replace None with your code
 df_boston = pd.read_sql("""
-    SELECT e.firstName, e.lastName, e.jobTitle 
+    SELECT e.firstName, e.lastName 
     FROM employees e
     JOIN offices o ON e.officeCode = o.officeCode
     WHERE o.city = 'Boston';
